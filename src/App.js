@@ -1,21 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-const {app} = window.require('electron').remote;
+import NewMessageForm from "./NewMessageForm";
+import { results } from "./api";
 
 class App extends Component {
+  componentDidMount() {
+    results();
+  }
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>React + Electron = <span role="img" aria-label="love">😍</span></h2>
+          <h2>
+            Till + Manifold ={" "}
+            <span role="img" aria-label="love">
+              😍
+            </span>
+          </h2>
         </div>
-        <p className="App-intro">
-          <b> Release 0.2.7 </b>
-          Version: {app.getVersion()}
-        </p>
+        <p className="App-intro">Till it like it is!</p>
+        <NewMessageForm />
       </div>
     );
   }

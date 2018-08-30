@@ -19,6 +19,29 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+form div {
+  margin-top: 1rem;
+}
+
+form div input {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 25%;
+}
+
+form button {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.validPhone {
+  color: green;
 }
